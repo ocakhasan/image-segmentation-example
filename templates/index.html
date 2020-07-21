@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<form method="post" action="/" enctype="multipart/form-data">
+		<dl>
+			<p>
+				<input type="file" name="file" autocomplete="off" required>
+			</p>
+		</dl>
+		<p>
+			<input type="submit" value="Submit">
+		</p>
+	</form>
+
+
+	{% if real_image %}
+	<div style="float: left; margin: 10px; align-items: center;">
+		<div style="float:left; margin: 20px;">
+			<h2>Normal Image</h2>
+			<img src="{{ url_for('display_image', filename=real_image) }}"
+				style="width: 500px; height: auto;">
+		</div>
+
+		<div style="float:right; margin: 20px;">
+			<h2 >Segmented Image</h2>
+			<img src="{{url_for('static', filename=image_segmented)}}" align="middle"
+				style="width: 500px; height: auto;" />
+		</div>
+	</div>
+	{% endif %}
+
+
+
+
+
+</body>
+
+</html>
