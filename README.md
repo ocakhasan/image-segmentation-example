@@ -15,6 +15,7 @@ It will save the model. You can download the model weights from the files part i
 * Create a folder named model
 * Paste the files or folders you download into that folder.
 
+After those steps, from the command line just write
 ```
 set FLASK_APP=main.py (in Windows)
 export FLASK_APP=main.py (in Unix or MacOS)
@@ -25,3 +26,4 @@ After that just run
 ```
 flask run
 ```
+It will open the application in the "http://127.0.0.1:5000/".
